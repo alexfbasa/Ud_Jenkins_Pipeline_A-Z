@@ -9,7 +9,7 @@ services:
     ports:
       - "8080:8090"
     volumes:
-      - "$PWD/tomcat_home:/usr/local/tomcat/webapps"
+      - "$PWD/tomcat_home:/usr/local/tomcat"
     networks:
       - net
 networks:
