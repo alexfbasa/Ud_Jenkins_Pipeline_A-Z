@@ -9,7 +9,8 @@ services:
     ports:
       - "8080:8090"
     volumes:
-      - "$PWD/tomcat_home:/usr/local/tomcat"
+      - "$PWD/tomcat_home:/usr/local/tomcat/conf/tomcat-users.xml"
+      - "$PWD/tomcat_home:/tmp/context.xml"
     networks:
       - net
 networks:
