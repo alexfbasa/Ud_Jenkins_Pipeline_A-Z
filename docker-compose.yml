@@ -3,6 +3,7 @@ services:
   web:
     container_name: tomcat
     image: tomcat
+    restart: always
     build:
       context: tomcat
     ports:
