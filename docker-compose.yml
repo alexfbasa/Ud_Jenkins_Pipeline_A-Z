@@ -8,9 +8,9 @@ services:
       context: tomcat
     ports:
       - "8080:8090"
-    volumes:
-      - "$PWD/tomcat_home:/usr/local/tomcat/conf/tomcat-users.xml"
-      - "$PWD/tomcat_home:/tmp/context.xml"
+#    volumes:
+#      - "$PWD/tomcat_home:/usr/local/tomcat/conf/tomcat-users.xml"
+#      - "$PWD/tomcat_home:/tmp/context.xml"
     networks:
       - net
 networks:
