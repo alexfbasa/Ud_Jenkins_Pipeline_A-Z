@@ -20,5 +20,18 @@ services:
       - net
     networks:
       - net
+  web:
+    container_name: tomcat
+    image: tomcat
+    build:
+      context: web
+    ports:
+      - "80:80"
+#    volumes:
+#      - "$PWD/jenkins_home:/var/jenkins_home"
+    networks:
+      - net
+    networks:
+      - net
 networks:
   net:
