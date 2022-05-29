@@ -32,5 +32,14 @@ services:
       - './context.xml:/usr/local/tomcat/webapps/manager/META-INF/context.xml:rw'
     networks:
       - net
+  database:
+    containser_name: pgsql_db
+    image: pgsql_db
+    build:
+      context: db
+    ports:
+      - "5433:5432"
+    volumes:
+      - "$PWD/db_home:/var/lib/postgresql/data/"
 networks:
   net:
