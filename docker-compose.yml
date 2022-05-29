@@ -30,16 +30,20 @@ services:
     volumes:
       - './tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml:rw'
       - './context.xml:/usr/local/tomcat/webapps/manager/META-INF/context.xml:rw'
+      - './tasks-frontend/:/usr/local/tomcat/webapps/tasks-frontend/'
+      - './tasks-backend/:/usr/local/tomcat/webapps/tasks-backend/'
     networks:
       - net
   database:
-    containser_name: pgsql_db
-    image: pgsql_db
-    build:
-      context: db
+    container_name: pgsql_db
+    image: postgres:9.6
     ports:
       - "5433:5432"
     volumes:
       - "$PWD/db_home:/var/lib/postgresql/data/"
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=senha123
+      - POSTGRES_DB=db
 networks:
   net:
