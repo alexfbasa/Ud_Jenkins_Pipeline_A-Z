@@ -9,8 +9,8 @@ services:
       - "8080:8080"
     volumes:
       - "$PWD/jenkins_home:/var/jenkins_home"
-      - './tasks-frontend/:/usr/local/tomcat/webapps/tasks-frontend/'
-      - './tasks-backend/:/usr/local/tomcat/webapps/tasks-backend/'
+      - './tasks-frontend/:/usr/local/tomcat/webapps/tasks-frontend/rw'
+      - './tasks-backend/:/usr/local/tomcat/webapps/tasks-backend/rw'
     networks:
       - net
   remote_host:
