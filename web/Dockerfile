@@ -1,10 +1,5 @@
 FROM tomcat:8.0-alpine
 
-RUN apk add --no-cache \
-    git \
-    maven \
-    bash \
-    curl wget
 
 RUN sed -i 's/port="8080"/port="80"/' /usr/local/tomcat/conf/server.xml
 

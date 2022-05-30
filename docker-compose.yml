@@ -9,6 +9,8 @@ services:
       - "8080:8080"
     volumes:
       - "$PWD/jenkins_home:/var/jenkins_home"
+      - './tasks-frontend/:/usr/local/tomcat/webapps/tasks-frontend/'
+      - './tasks-backend/:/usr/local/tomcat/webapps/tasks-backend/'
     networks:
       - net
   remote_host:
@@ -28,8 +30,6 @@ services:
     volumes:
       - './tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml:rw'
       - './context.xml:/usr/local/tomcat/webapps/manager/META-INF/context.xml:rw'
-      - './tasks-frontend/:/usr/local/tomcat/webapps/tasks-frontend/'
-      - './tasks-backend/:/usr/local/tomcat/webapps/tasks-backend/'
     networks:
       - net
   database:
