@@ -1,18 +1,18 @@
 version: '3'
 services:
-  jenkins:
-    container_name: jenkins
-    image: jenkins-ansible
-    build:
-      context: jenkins_ansible
-    ports:
-      - "8080:8080"
-    volumes:
-      - "$PWD/jenkins_home:/var/jenkins_home"
-      - './tasks-frontend/:/usr/local/tomcat/webapps/tasks-frontend/'
-      - './tasks-backend/:/usr/local/tomcat/webapps/tasks-backend/'
-    networks:
-      - net
+#  jenkins:
+#    container_name: jenkins
+#    image: jenkins-ansible
+#    build:
+#      context: jenkins_ansible
+#    ports:
+#      - "8080:8080"
+#    volumes:
+#      - "$PWD/jenkins_home:/var/jenkins_home"
+#      - './tasks-frontend/:/usr/local/tomcat/webapps/tasks-frontend/'
+#      - './tasks-backend/:/usr/local/tomcat/webapps/tasks-backend/'
+#    networks:
+#      - net
   remote_host:
     container_name: remote-host
     image: remote-host
@@ -26,7 +26,7 @@ services:
     build:
       context: web
     ports:
-      - "80:80"
+      - "8080:8080"
 #    volumes:
 #      - './tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml:rw'
 #      - './context.xml:/usr/local/tomcat/webapps/manager/META-INF/context.xml:rw'
