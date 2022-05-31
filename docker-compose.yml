@@ -27,9 +27,9 @@ services:
       context: web
     ports:
       - "80:80"
-    volumes:
-      - './tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml:rw'
-      - './context.xml:/usr/local/tomcat/webapps/manager/META-INF/context.xml:rw'
+#    volumes:
+#      - './tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml:rw'
+#      - './context.xml:/usr/local/tomcat/webapps/manager/META-INF/context.xml:rw'
     networks:
       - net
   database:
