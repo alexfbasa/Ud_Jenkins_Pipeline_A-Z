@@ -43,7 +43,6 @@ services:
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=senha123
       - POSTGRES_DB=db
-      -
   sonarqube:
     container_name: sonar
     image: sonarqube:7.9.2-community
