@@ -37,8 +37,6 @@ services:
     image: postgres:9.6
     ports:
       - "5433:5432"
-    volumes:
-      - "$PWD/db_home:/var/lib/postgresql/data/"
     environment:
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=senha123
