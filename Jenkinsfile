@@ -5,7 +5,7 @@ pipeline {
             steps {
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/alexfbasa/pact-backend.git']]])
                 sh 'ls -la'
-                sh 'mvn clean package DskipTests=true'
+                sh 'mvn clean package -DskipTests=true'
             }
         }
         stage ('Build DEV'){
