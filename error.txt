@@ -1,0 +1,21 @@
+sonarqube docker increase memory dockerfile
+$ sudo sysctl -w vm.max_map_count=262144
+
+
+## Plugins
+Jenkins deploy container Tomcat
+Instalar plugin container deploy
+Instalar Sonar Quality Gattes
+
+Integrar Jenkins com Sonarqube
+Instalar o plugin no jenkins.
+Gerar token no Sonarqube, depois de logado em my account no Sonarqube - seguranca
+Sonarqube Scanner.
+
+
+
+Manager Jenkins -->  configuracoes Systema  - configurar Sonarqube
+Add - Sonarqube
+
+Confure o Quality Gattes depois salve, volte e finalize as configuracoes
+do Scanner em Global conf tools
