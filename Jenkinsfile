@@ -18,7 +18,7 @@ pipeline {
                 scannerHome = tool 'SONNAR_SCANNER'
             }
             steps{
-                sh "${scannerHome}/bin/sonar-scanner -Dsonar-scanner -e -Dsonar.projectKey=DeployBack -Dsonar.host.url=http://-Dsonar:9000 -Dsonar.login=6284aea55a28f72b4b8833a9dfe72b0cf53467fa -Dsonar.java.binaries=target"
+                sh "${scannerHome}/bin/sonar-scanner -Dsonar.host.url=http://sonar:9000 -Dsonar.login=6284aea55a28f72b4b8833a9dfe72b0cf53467fa -Dsonar.java.binaries=target -Dsonar.projectKey=DeployBack"
             }
         }
     }
