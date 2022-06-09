@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('Checkout SCM') {
             steps {
-                sh 'echo Hello world'
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/alexfbasa/pact-backend.git']]])
             }
         }
         stage ('Build DEV'){
