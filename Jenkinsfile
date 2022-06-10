@@ -36,5 +36,15 @@ pipeline {
                 deploy adapters: [tomcat8(credentialsId: 'login_tomcat', path: '', url: 'http://tomcat:80/')], contextPath: 'tasks-backend-0.0.2-SNAPSHOT', war: 'target/tasks-backend-0.0.2-SNAPSHOT.war'
             }
         }
+        stage('DeployFron'){
+            steps {
+                dir('front-end'){
+                    checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/alexfbasa/tasks-frontend.git']]])
+                    sh 'ls -la'
+                }
+
+                deploy adapters: [tomcat8(credentialsId: 'login_tomcat', path: '', url: 'http://tomcat:80/')], contextPath: 'tasks-backend-0.0.2-SNAPSHOT', war: 'target/tasks-backend-0.0.2-SNAPSHOT.war'
+            }
+        }
     }
 }
