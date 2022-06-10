@@ -36,12 +36,14 @@ pipeline {
                 deploy adapters: [tomcat8(credentialsId: 'login_tomcat', path: '', url: 'http://tomcat:80/')], contextPath: 'tasks-backend-0.0.2-SNAPSHOT', war: 'target/tasks-backend-0.0.2-SNAPSHOT.war'
             }
         }
-        stage('DeployFron'){
+        stage('DeployFront'){
             steps {
                 dir('front-end'){
                     git 'https://github.com/alexfbasa/tasks-frontend.git'
-                    sh 'mvn test'
+                    sh 'mvn clean package'
                     sh 'ls -la'
+                    deploy adapters: [tomcat8(credentialsId: 'login_tomcat', path: '', url: 'http://tomcat:80/')], contextPath: 'tasks', war: 'target/tasks.war'
+
                 }
             }
         }
