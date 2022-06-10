@@ -3,11 +3,9 @@ pipeline {
     stages {
         stage('Checkout SCM') {
             steps {
-                dir('api-backend'){
-                    checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/alexfbasa/pact-backend.git']]])
-                    sh 'ls -la'
-                    sh 'mvn clean package -DskipTests=true'
-                }
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/alexfbasa/pact-backend.git']]])
+                sh 'ls -la'
+                sh 'mvn clean package -DskipTests=true'
             }
         }
         stage('Unit Tests') {
