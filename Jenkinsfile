@@ -40,6 +40,7 @@ pipeline {
             steps {
                 dir('front-end'){
                     git 'https://github.com/alexfbasa/tasks-frontend.git'
+                    sh 'mvn test'
                     sh 'ls -la'
                 }
             }
