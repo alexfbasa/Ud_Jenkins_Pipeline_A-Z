@@ -1,6 +1,12 @@
 pipeline {
     agent any
     stages {
+        stage('Checkout SCM') {
+            steps {
+                sh 'ls -la'
+                sh 'mvn clean package -DskipTests=true'
+            }
+        }
         stage('Unit Tests') {
             steps {
                 sh 'mvn test'
