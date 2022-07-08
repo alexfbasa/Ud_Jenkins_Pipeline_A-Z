@@ -2,15 +2,17 @@ version: '3'
 services:
   jenkins:
     container_name: jenkins
-    image: jenkins
+    image: jenkins-docker
     build:
       context: jenkins
     ports:
       - "8080:8080"
+      - "5000:5000"
     volumes:
       - "$PWD/jenkins_home:/var/jenkins_home"
       - './tasks-frontend/:/usr/local/tomcat/webapps/tasks-frontend/'
       - './tasks-backend/:/usr/local/tomcat/webapps/tasks-backend/'
+      - '/var/run/docker.sock:/var/run/docker.sock'
     networks:
       - net
   remote_host:
