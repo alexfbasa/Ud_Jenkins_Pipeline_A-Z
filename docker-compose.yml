@@ -2,9 +2,9 @@ version: '3'
 services:
   jenkins:
     container_name: jenkins
-    image: jenkins-ansible
+    image: jenkins
     build:
-      context: jenkins_ansible
+      context: jenkins
     ports:
       - "8080:8080"
     volumes:
