@@ -61,6 +61,9 @@ de interpretação e execução de JavaScript presente no Google Chrome, chamado
 - O projeto sera buildadao e salvo em jenkins_home/workspace/nodejs_example_app/
 
 ## Publicando Aplicacao NodeJS em Docker
+
+https://betterprogramming.pub/about-var-run-docker-sock-3bfd276e12fd
+
 Vamos adicionar a funcionalidade para o Docker-Jenkins rodar container.
 Jenkins container precisar acessar o docker socket rodando na maquina virtual
 - Instale o plugin CloudBees Docker Build and publish plugin no Jenkins
