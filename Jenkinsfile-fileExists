@@ -1,17 +1,17 @@
 pipeline{
     agent any
     environment{
-        MY_FILE = fileExists '/etc/environment'
+        MY_FILE = fileExists $FILE_NAME
     }
     stages{
         stage('conditional if exists'){
-            when { frase { MY_FILE == 'true' } }
+            when { expression  { MY_FILE == 'true' } }
             steps {
                 echo "file exists"
             }
         }
         stage('conditional if not exists'){
-            when { frase { MY_FILE == 'false' } }
+            when { expression  { MY_FILE == 'false' } }
             steps {
                 echo "file does not exist"
             }
