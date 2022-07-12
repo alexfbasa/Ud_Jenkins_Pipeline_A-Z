@@ -1,7 +1,7 @@
 pipeline{
     agent any
     environment{
-        MY_FILE = fileExists $FILE_NAME
+        MY_FILE = fileExists "$FILE_NAME"
     }
     stages{
         stage('conditional if exists'){
