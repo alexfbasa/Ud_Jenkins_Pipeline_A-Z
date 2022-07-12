@@ -1,0 +1,13 @@
+def name1 = NAME01
+def name2 = NAME02
+pipeline {
+    agent any
+}
+stages {
+    stage('Checkout SCM') {
+        steps {
+            println "$name1 $name2"
+        }
+    }
+}
+
