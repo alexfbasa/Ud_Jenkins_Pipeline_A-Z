@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+    environment {
+        DEPLOY_TO = 'Producao'
+    }
+    stages {
+        stage('Build') {
+            when {
+                environment name: 'DEPLOY_TO', value: 'Producao'
+            }
+            steps {
+                echo 'Deploying'
+            }
+        }
+    }
+}
