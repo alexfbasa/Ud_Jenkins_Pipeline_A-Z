@@ -1,19 +1,18 @@
+def file = $FILE_NAME
 pipeline{
     agent any
-    environment{
-        MY_FILE = fileExists "$FILE_NAME"
-    }
+
     stages{
         stage('conditional if exists'){
-            when { expression  { MY_FILE == 'true' } }
+            when { expression  { $file == 'true' } }
             steps {
-                echo "file $MY_FILE exists"
+                echo "file $file exists"
             }
         }
         stage('conditional if not exists'){
-            when { expression  { MY_FILE == 'false' } }
+            when { expression  { $file == 'false' } }
             steps {
-                echo "file $MY_FILE does not exist"
+                echo "file $file does not exist"
             }
         }
     }
