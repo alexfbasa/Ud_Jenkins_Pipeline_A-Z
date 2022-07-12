@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            options {
+                // importa a classe para informa hora do Build
+                // Somente nesse parte da Build
+                timestamps()
+            }
+            steps {
+                echo "Hello world in Build"
+                echo "Hello world in Build again"
+            }
+        }
+        stage('Test') {
+            // Sem timestamp
+            steps{
+                echo "Hello world in Test"
+                echo "Hello world in Test again"
+            }
+        }
+    }
+}

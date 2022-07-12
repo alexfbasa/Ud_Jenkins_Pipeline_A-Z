@@ -4,6 +4,7 @@ pipeline{
         MY_FILE = fileExists "$FILE_NAME"
     }
     stages{
+    // Expression is normal parameter
         stage('conditional if exists'){
             when { expression  { MY_FILE == 'true' } }
             steps {
