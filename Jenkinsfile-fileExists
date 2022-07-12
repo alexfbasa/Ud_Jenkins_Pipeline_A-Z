@@ -1,4 +1,4 @@
-def file = $FILE_NAME
+def file = "$FILE_NAME"
 pipeline{
     agent any
 
