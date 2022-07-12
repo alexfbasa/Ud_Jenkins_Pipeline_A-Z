@@ -1,9 +1,8 @@
+def name1 = 'Alexandre'
+def name2 = 'Basilio'
+
 pipeline {
     agent any
-    environment {
-        name1 = 'Alexandre'
-        name2 = 'Basilio'
-    }
     stages {
         stage('Salutation World') {
             environment {
@@ -15,11 +14,6 @@ pipeline {
                 echo "Name3 ${name3}"
             }
         }
-        stage('Salutation User') {
-            steps {
-                echo "Hello $NAME"
-            }
-        }
+
     }
 }
-
