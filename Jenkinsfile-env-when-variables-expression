@@ -13,7 +13,7 @@ pipeline {
                 }
             }
             steps {
-                echo "Deploying in ${packageType}"
+                echo "Building allOf ${user} ${packageType}"
             }
         }
     }
