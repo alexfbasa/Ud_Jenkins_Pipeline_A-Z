@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    // Nivel da pipeline
+    options  {
+        timestamps()
+    }
     stages {
         stage('Build') {
             options {
