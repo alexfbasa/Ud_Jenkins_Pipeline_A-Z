@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                tool {
+                    maven "Maven 3"
+                }
+
+            }
+            steps {
+                sh 'mvn --version'
+            }
+        }
+    }
+}
