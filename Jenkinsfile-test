@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Salutation World') {
             environment {
-                name3 = 'Jenifer'
+//                name3 = sh 'export MY_NAME=$(whoami)'
             }
             steps {
                 echo "Name1 ${name1}"
