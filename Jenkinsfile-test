@@ -12,6 +12,12 @@ pipeline {
                 echo "Name1 ${name1}"
                 echo "Name2 ${name2}"
                 echo "Name3 ${name3}"
+                sh "printenv"
+            }
+        }
+        stage('Check varibles'){
+            steps {
+                sh "printenv"
             }
         }
 
