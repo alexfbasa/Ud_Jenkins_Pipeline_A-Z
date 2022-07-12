@@ -1,6 +1,3 @@
-def name1 = ''
-def name2 = ''
-
 pipeline {
     agent any
     stages {
