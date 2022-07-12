@@ -9,7 +9,7 @@ pipeline {
                 environment name: 'DEPLOY_TO', value: 'Producao'
             }
             steps {
-                echo 'Deploying'
+                echo "Deploying in ${packageType}"
             }
         }
     }
