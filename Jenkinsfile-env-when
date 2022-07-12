@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DEPLOY_TO = params 'foo'
+        DEPLOY_TO = params('$foo')
     }
     stages {
         stage('Build') {
