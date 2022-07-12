@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DEPLOY_TO = 'Producao'
+        DEPLOY_TO = '${foo}'
     }
     stages {
         stage('Build') {
@@ -14,3 +14,11 @@ pipeline {
         }
     }
 }
+/*
+Create a WORKFLOW job.
+Enable "This build is parameterized".
+Add a STRING PARAMETER foo with default value bar text.
+Add the code below to Workflow Script:
+*/
+// https://stackoverflow.com/questions/28572080/how-to-access-parameters-in-a-parameterized-build
+// print "DEBUG: parameter foo = ${env.foo}"
