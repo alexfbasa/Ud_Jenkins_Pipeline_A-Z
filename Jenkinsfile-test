@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Salutation User') {
             steps {
-                echo 'Hello $NAME'
+                echo "Hello $NAME"
             }
         }
     }
