@@ -1,10 +1,9 @@
-def file = $FILE_DIR
-stage ('Check for existence of index.html') {
+stage ('Check for existence of /etc/environment') {
     agent any
     steps {
         script {
-            if (fileExists("$file") {
-                echo "File $file found!"
+            if (fileExists('/etc/environment') {
+                echo "File /etc/environment found!"
             }
         }
     }
