@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            environment {
+                SOME_USERNAME_PASSWORD = credentials('some_username_password')
+                SOME_SECRET = credentials('some_secret')
+            }
+            //SOME_USERNAME_PASSWORD is in the format of username:password
+
+            steps {
+				echo "SOME_USERNAME_PASSWORD ${SOME_USERNAME_PASSWORD}"
+                echo "SOME_USERNAME_PASSWORD_USR ${SOME_USERNAME_PASSWORD_USR}"
+                echo "SOME_USERNAME_PASSWORD_PSW ${SOME_USERNAME_PASSWORD_PSW}"
+                echo "SOME_SECRET ${SOME_SECRET}"
+            }
+        }
+    }
+}
