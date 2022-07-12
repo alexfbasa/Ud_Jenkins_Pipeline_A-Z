@@ -1,14 +1,11 @@
-pipeline {
+def file = $FILE_DIR
+stage ('Check for existence of index.html') {
     agent any
-    stage('Check for existence of file') {
-        steps {
-             script{
-                 if (fileExists("$FILE_DIR"))
-                     echo "FIle $FILE_DIR was found!"
-                 else
-                     echo "FIle $FILE_DIR was not found!"
-             }
+    steps {
+        script {
+            if (fileExists("$file") {
+                echo "File $file found!"
+            }
         }
     }
 }
-
