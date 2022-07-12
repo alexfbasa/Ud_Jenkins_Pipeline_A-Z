@@ -1,4 +1,4 @@
-def name1 = 'Alexandre'
+def name1 = ${NAME}
 def name2 = 'Basilio'
 
 pipeline {
