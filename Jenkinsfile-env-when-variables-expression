@@ -1,6 +1,7 @@
 pipeline {
     agent any
     environment {
+        USER_EXECUTOR = "${user}"
         DEPLOY_TO = "${packageType}"
     }
     stages {
@@ -15,5 +16,18 @@ pipeline {
             }
         }
     }
+        stages {
+            stage('Build all paremeter') {
+                when {
+                    allOf {
+                        environment name: ${packageType}, value: '1.0'
+                        environment name: ${user}, value: 'Alex'
+                    }
+                }
+                steps {
+                    echo "Deploying in ${packageType}"
+                }
+            }
+        }
 }
 
