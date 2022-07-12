@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+    environment {
+        DEPLOY_TO = "${packageType}"
+    }
+    stages {
+        stage('Build') {
+            when {
+                expression {
+                    DEPLOY_TO == '1.0'
+                }
+            }
+            steps {
+                echo "Deploying in ${packageType}"
+            }
+        }
+    }
+}
+
