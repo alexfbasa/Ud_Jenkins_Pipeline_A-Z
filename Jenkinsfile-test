@@ -1,9 +1,18 @@
 pipeline {
     agent any
+    environment {
+        name1 = 'Alexandre'
+        name2 = 'Basilio'
+    }
     stages {
         stage('Salutation World') {
+            environment {
+                name3 = 'Jenifer'
+            }
             steps {
-                echo 'Hello-World'
+                echo "Name1 ${name1}"
+                echo "Name2 ${name2}"
+                echo "Name3 ${name3}"
             }
         }
         stage('Salutation User') {
