@@ -1,13 +1,13 @@
 pipeline {
     agent any
-    steps {
-        script{
-            if (fileExists("$FILE_DIR")){
-                echo "File $FILE_DIR was found!"
-
-            }
-            else
-                echo "File $FILE_DIR was not found!"
+    stage('Check for existence of file') {
+        steps {
+             script{
+                 if (fileExists("$FILE_DIR"))
+                     echo "FIle $FILE_DIR was found!"
+                 else
+                     echo "FIle $FILE_DIR was not found!"
+             }
         }
     }
 }
