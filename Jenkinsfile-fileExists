@@ -1,20 +1,14 @@
 pipeline {
     agent any
+    steps {
+        script{
+            if (fileExists("$FILE_DIR")){
+                echo "File $FILE_DIR was found!"
 
-    stages {
-        stage('Build') {
-            tools {
-                maven 'Maven 3'
             }
-            steps {
-                sh 'mvn --version'
-            }
-        }
-        stage('Check for existence of file') {
-            if (fileExists("$FILE_DIR"))
-                echo "File $FILE_DIR found!"
             else
-                echo "File was not found!"
+                echo "File $FILE_DIR was not found!"
         }
     }
 }
+
