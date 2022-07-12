@@ -20,8 +20,8 @@ pipeline {
             stage('Build all paremeter') {
                 when {
                     allOf {
-                        environment name: ${packageType}, value: '1.0'
-                        environment name: ${user}, value: 'Alex'
+                        environment name: "${packageType}", value: '1.0'
+                        environment name: "${user}", value: 'Alex'
                     }
                 }
                 steps {
