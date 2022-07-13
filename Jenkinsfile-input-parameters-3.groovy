@@ -7,14 +7,12 @@ pipeline {
             steps {
                 script {
                     firstName = input(
-                            message: 'What is your first name?',
+                            message1: 'What is your first name?',
+                            parameters1: [string(defaultValue: 'Dave', name: 'FIRST_NAME', trim: true)],
+                            message2: 'What is your second name?',
+                            parameters2: [string(defaultValue: 'Basa', name: 'SECOND_NAME', trim: true)],
                             ok: 'Submit',
-                            parameters: [string(defaultValue: 'Dave', name: 'FIRST_NAME', trim: true)]
-                    )
-                    secondName = input(
-                            message: 'What is your second name?',
-                            ok: 'Submit',
-                            parameters: [string(defaultValue: 'Basa', name: 'SECOND_NAME', trim: true)]
+
                     )
                 }
 
