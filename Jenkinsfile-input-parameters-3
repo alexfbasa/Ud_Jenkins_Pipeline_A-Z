@@ -11,26 +11,25 @@ pipeline {
                             ok: 'Submit',
                             parameters: [string(defaultValue: 'Dave', name: 'FIRST_NAME', trim: true)]
                     )
-                }
-                script {
                     secondName = input(
                             message: 'What is your second name?',
                             ok: 'Submit',
                             parameters: [string(defaultValue: 'Basa', name: 'SECOND_NAME', trim: true)]
                     )
                 }
-            }
-        }
-        stage('output') {
-            agent any
-            steps {
-                script {
-                    echo "Good Morning, $firstName $secondName"
+
+                stage('output') {
+                    agent any
+                    steps {
+                        script {
+                            echo "Good Morning, $firstName $secondName"
+                        }
+                        sh '''
+                          hostname
+                          cat /etc/redhat-release
+                        '''
+                    }
                 }
-                sh '''
-          hostname
-          cat /etc/redhat-release
-        '''
             }
         }
     }
