@@ -1,3 +1,5 @@
+// Nunca coloque o input rodando num agente para nao prender ele
+
 pipeline {
   agent none
   stages {
@@ -6,6 +8,7 @@ pipeline {
         input(message: 'Hello World!', ok: 'Submit')
       }
     }
+// Reservou o agente para rodar a respota do input
     stage('all done') {
       agent any
       steps {
