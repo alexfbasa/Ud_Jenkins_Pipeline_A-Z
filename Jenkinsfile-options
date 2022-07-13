@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '1'))
+        timestamps()
+    }
+    stages {
+        stage('input') {
+            steps {
+                echo "Good Morning"
+                sh '''
+                  hostname
+                  cat /etc/*-release
+                '''
+            }
+        }
+
+    }
+}
