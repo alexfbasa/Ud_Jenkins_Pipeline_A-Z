@@ -1,13 +1,17 @@
-// Essa pipeline vai ficar presa
 pipeline {
-  agent any
+  agent none
   stages {
-    stage('Build') {
+    stage('input') {
       steps {
         input(message: 'Hello World!', ok: 'Submit')
+      }
+    }
+    stage('all done') {
+      agent any
+      steps {
         sh '''
           hostname
-          cat /etc/*release
+          cat /etc/redhat-release
         '''
       }
     }
