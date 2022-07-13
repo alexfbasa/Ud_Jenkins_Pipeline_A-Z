@@ -10,8 +10,7 @@ pipeline {
       agent any
       steps {
         sh '''
-          hostname
-          cat /etc/*-release
+          ls -la
         '''
       }
     }
