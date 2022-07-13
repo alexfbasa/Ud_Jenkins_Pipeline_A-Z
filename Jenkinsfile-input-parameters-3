@@ -1,29 +1,37 @@
 def firstName = null
+def secondName = null
 pipeline {
-  agent none
-  stages {
-    stage('input') {
-      steps {
-        script {
-          firstName = input (
-            message: 'What is your first name?',
-            ok: 'Submit',
-            parameters: [string(defaultValue: 'Dave', name: 'FIRST_NAME', trim: true)]
-          )
+    agent none
+    stages {
+        stage('input') {
+            steps {
+                script {
+                    firstName = input(
+                            message: 'What is your first name?',
+                            ok: 'Submit',
+                            parameters: [string(defaultValue: 'Dave', name: 'FIRST_NAME', trim: true)]
+                    )
+                }
+                script {
+                    secondName = input(
+                            message: 'What is your second name?',
+                            ok: 'Submit',
+                            parameters: [string(defaultValue: 'Basa', name: 'SECOND_NAME', trim: true)]
+                    )
+                }
+            }
         }
-      }
-    }
-    stage('output') {
-      agent any
-      steps {
-        script {
-          echo "Good Morning, $firstName"
-        }
-        sh '''
+        stage('output') {
+            agent any
+            steps {
+                script {
+                    echo "Good Morning, $firstName $secondName"
+                }
+                sh '''
           hostname
           cat /etc/redhat-release
         '''
-      }
+            }
+        }
     }
-  }
 }
