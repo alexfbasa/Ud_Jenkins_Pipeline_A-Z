@@ -7,6 +7,7 @@ pipeline {
     stages {
         stage('Build all paremeter') {
             when {
+                // anyOf - Para uma variavel aceita
                 allOf {
                     environment name: 'USER_EXECUTOR', value: 'Alex'
                     environment name: 'DEPLOY_TO', value: '1.0'
