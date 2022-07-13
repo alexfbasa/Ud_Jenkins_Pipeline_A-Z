@@ -1,0 +1,14 @@
+pipeline {
+  agent any
+  stages {
+    stage('Build') {
+      steps {
+        input(message: 'Hello World!', ok: 'Submit')
+        sh '''
+          hostname
+          cat /etc/redhat-release
+        '''
+      }
+    }
+  }
+}
