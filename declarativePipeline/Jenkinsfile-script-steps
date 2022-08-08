@@ -9,9 +9,7 @@ pipeline {
                 else
                     println 'Hi anonymous'
                 sleep 2
-            }
-            steps('Ending process') {
-                println 'Finalizando a Build'
+                echo 'Finalizando a Build'
             }
         }
     }
