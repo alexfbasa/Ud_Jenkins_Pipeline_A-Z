@@ -1,5 +1,24 @@
-# learning_jenkins
+# Course Alura - Devops: Jenkins Pipeline As Code: All you need to know A - Z
+## Recursos 
+Todos os recursos para esse curso esta na pasta resources
 
+## Virtual Machines 
+Todos os testes foram feitos no ambiente do VirtualBox, rodando uma maquina virtual Centos7
+https://www.osboxes.org/centos/
+Username: osboxes
+Password: osboxes.org
+Root Account Password: osboxes.org
+Guest Tools: Open-VM-Tools Installed
+
+## Jenkins em container
+1 - Criar o Dockerfile
+2 - Criar o docker-compose.yml
+3 - Buld a imagem 
+4 - Alterar permissao jenkins_home - Pior dos casos 777 para a pasta jenkins_home
+https://www.digitalocean.com/community/tutorials/how-to-automate-jenkins-setup-with-docker-and-jenkins-configuration-as-code
+
+## Docker e Dockercompose 
+https://serverspace.io/support/help/how-to-install-docker-on-centos-8/
 ## Plugins
 
 Deploy to container
