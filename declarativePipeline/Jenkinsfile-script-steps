@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                def name = 'Alex'
+                if (name == 'Alex')
+                    prinln "Hi $name"
+                else
+                    println 'Hi anonymous'
+                sleep 2
+            }
+            steps('Ending process') {
+                println 'Finalizando a Build'
+            }
+        }
+    }
+}
+// Comentario
