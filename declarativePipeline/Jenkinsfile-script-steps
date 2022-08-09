@@ -3,13 +3,15 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                def name = 'Alex'
-                if (name == 'Alex')
-                    prinln "Hi $name"
-                else
-                    println 'Hi anonymous'
-                sleep 2
-                echo 'Finalizando a Build'
+                script{
+                    def name = 'Alex'
+                    if (name == 'Alex')
+                        prinln "Hi $name"
+                    else
+                        println 'Hi anonymous'
+                    sleep 2
+                    echo 'Finalizando a Build'
+                }
             }
         }
     }
