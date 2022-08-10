@@ -10,8 +10,8 @@ Criando duas entradas de NAME ao rodar a pipeline esse sera imprimido
 pipeline{
     agent any
     environment{
-        name1 = ${NAME01}
-        name2 = ${NAME02}
+        name1 = "${NAME01}"
+        name2 = "${NAME02}"
     }
     stages{
         stage('Build'){
