@@ -11,6 +11,7 @@ pipeline {
                     currentBuild.result = 'FAILURE'
                 }
                 echo 'Finalizando a Build'
+                echo 'After setting current build to FAILURE'
             }
         }
     }
