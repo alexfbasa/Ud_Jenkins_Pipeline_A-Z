@@ -12,9 +12,9 @@ pipeline {
     environment {
         // USER_EXECUTOR = variavel do codigo ira receber
         // user = variavel do parametro passado na build
+        ENV = "${env}"
         USER_EXECUTOR = "${user}"
         DEPLOY_TO = "${packageType}"
-        ENV = "${env}"
     }
     stages {
         stage('Build all paremeter') {
