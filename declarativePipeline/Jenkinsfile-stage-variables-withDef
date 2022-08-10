@@ -7,13 +7,10 @@ e depois descartadas
 Criando duas entradas de NAME ao rodar a pipeline esse sera imprimido
 
  */
-
+def name1 = "${NAME01}"
+def name2 = "${NAME02}"
 pipeline{
     agent any
-    environment{
-        name1 = "${NAME01}"
-        name2 = "${NAME02}"
-    }
     stages{
         stage('Build'){
             steps{
