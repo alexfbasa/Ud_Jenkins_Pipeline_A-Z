@@ -1,0 +1,31 @@
+/*
+Voce pode definir variaveis a nivel globla e a nivel do step que serao consumidas
+e depois descartadas
+ */
+/* Essas variaveis serao definidas no Jenkins habilitando a opcao
+[] This project is parameterized
+Crie uma variavel user e packageType
+
+ */
+pipeline {
+    agent any
+    environment {
+        USER_EXECUTOR = "${user}"
+        DEPLOY_TO = "${packageType}"
+    }
+    stages {
+        stage('Build all paremeter') {
+            when {
+                /*
+                Quando o nome for igual a variavel passada e Deploy igual a versao
+                Isso execurar o deploy
+                 */
+                environment name: 'USER_EXECUTOR', value: 'Alex'
+                environment name: 'DEPLOY_TO', value: '1.0'
+            }
+            steps {
+                echo "Building allOf ${user} ${packageType}"
+            }
+        }
+    }
+}
