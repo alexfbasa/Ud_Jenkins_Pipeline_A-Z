@@ -14,21 +14,16 @@ pipeline {
         // user = variavel do parametro passado na build
         USER_EXECUTOR = "${user}"
         DEPLOY_TO = "${packageType}"
-        ENV = "${env}"
     }
     stages {
-        when {
-            environment name: 'ENV', value: 'Prod' {
-                stage('Build all paremeter') {
-                    when {
-                        /*
-                        Quando o nome for igual a variavel passada e Deploy igual a versao
-                        Isso execurar o deploy
-                         */
-                        environment name: 'USER_EXECUTOR', value: 'Alex'
-                        environment name: 'DEPLOY_TO', value: '1.0'
-                    }
-                }
+        stage('Build all paremeter') {
+            when {
+                /*
+                Quando o nome for igual a variavel passada e Deploy igual a versao
+                Isso execurar o deploy
+                 */
+                environment name: 'USER_EXECUTOR', value: 'Alex'
+                environment name: 'DEPLOY_TO', value: '1.0'
             }
             steps {
                 echo "Building allOf ${user} ${packageType}"
