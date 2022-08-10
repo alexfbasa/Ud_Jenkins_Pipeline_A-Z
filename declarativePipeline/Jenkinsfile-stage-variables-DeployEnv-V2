@@ -24,7 +24,7 @@ pipeline {
                 equals expected: 'DEPLOY_TO ', actual: '1.0'
             }
             steps {
-                echo "Building Deploying  ${user} ${packageType} $emv"
+                echo "Building Deploying  ${user} ${packageType} ${emv}"
             }
         }
     }
