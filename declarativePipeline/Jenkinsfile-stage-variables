@@ -14,10 +14,10 @@ pipeline {
     agent any
 
 }
-stages{
-    stage('Build'){
-        steps{
-            echo "$name1' '$name2"
+stages {
+    stage('Build') {
+        steps {
+            println "$name1' '$name2"
         }
     }
 }
