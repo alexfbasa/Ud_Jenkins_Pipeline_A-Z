@@ -19,9 +19,9 @@ pipeline {
     stages {
         stage('Build all paremeter') {
             when {
-                equals expected: "Test", actual: ENV
-                equals expected: "Alex", actual: USER_EXECUTOR
-                equals expected: "1.0", actual: DEPLOY_TO
+                equals expected: "Test", actual: $ENV
+                equals expected: "Alex", actual: $USER_EXECUTOR
+                equals expected: "1.0", actual: $DEPLOY_TO
             }
             steps {
                 echo "Building Deploying  ${user} ${packageType} ${emv}"
