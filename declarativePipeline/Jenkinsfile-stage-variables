@@ -1,0 +1,23 @@
+/*
+Voce pode definir variaveis a nivel globla e a nivel do step que serao consumidas
+e depois descartadas
+ */
+/* Essas variaveis serao definidas no Jenkins habilitando a opcao
+[] This project is parameterized
+Criando duas entradas de NAME ao rodar a pipeline esse sera imprimido
+
+ */
+
+def name1 = NAME01
+def name2 = NAME02
+pipeline {
+    agent any
+}
+stages {
+    stage('Checkout SCM') {
+        steps {
+            println "$name1 $name2"
+        }
+    }
+}
+// Comentario

@@ -2,6 +2,7 @@ pipeline {
     agent any
     // Nivel da pipeline
     options  {
+        // Isso informara o tempo de casa estagio da Pipeline
         timestamps()
     }
     stages {

@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             options {
-                retry(3)
+                retry(3) // Rodara a build 3 vezes
             }
             steps {
                 echo 'Before setting current build to FAILURE'
