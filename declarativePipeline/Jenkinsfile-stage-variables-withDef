@@ -9,7 +9,7 @@ Criando duas entradas de NAME ao rodar a pipeline esse sera imprimido
  */
 def name1 = "${NAME01}"
 def name2 = "${NAME02}"
-println "$name1 $name2"
+
 pipeline{
     agent any
     stages{
