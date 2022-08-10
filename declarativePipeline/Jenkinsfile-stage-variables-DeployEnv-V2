@@ -19,7 +19,9 @@ pipeline {
     stages {
         stage('Build all paremeter') {
             when {
-                environment name: 'ENV', value: 'Prod' {
+                equals expected: 'ENV', actual: 'Prod' {
+                }
+                steps {
                     environment name: 'USER_EXECUTOR', value: 'Alex'
                     environment name: 'DEPLOY_TO', value: '1.0'
                 }
