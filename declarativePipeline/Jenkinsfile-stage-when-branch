@@ -18,7 +18,7 @@ pipeline {
     stages {
         stage('Build Master') {
             when {
-                branch 'main'
+                BRANCH 'main'
             }
             steps {
                 echo "Building Deploying Master ${branch}"
