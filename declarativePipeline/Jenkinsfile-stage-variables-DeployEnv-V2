@@ -19,7 +19,7 @@ pipeline {
     stages {
         stage('Build all paremeter') {
             when {
-                equals {
+                not {
                     equals expected: 'ENV ', actual: 'Prod'
                     equals expected: 'USER_EXECUTOR', actual: 'Alex'
                     equals expected: 'DEPLOY_TO ', actual: '1.0'
