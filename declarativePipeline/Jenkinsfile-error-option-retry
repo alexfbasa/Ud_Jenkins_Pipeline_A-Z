@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            option {
+                retry(3)
+            }
+            steps {
+                echo 'Before setting current build to FAILURE'
+                script {
+                    currentBuild.result = 'FAILURE'
+                }
+                echo 'Finalizando a Build'
+            }
+        }
+    }
+}
+
+/*
+currentBuild.result eh uma variavel do Jenkins
+ */
