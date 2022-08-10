@@ -6,7 +6,7 @@ pipeline {
                 script{
                     def name = 'Alex'
                     if (name == 'Alex')
-                        prinln "Hi $name"
+                        println "Hi $name"
                     else
                         println 'Hi anonymous'
                     sleep 2
