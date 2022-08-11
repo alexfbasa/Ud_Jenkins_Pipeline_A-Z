@@ -9,16 +9,10 @@ Crie uma variavel user e packageType
  */
 pipeline {
     agent any
-    environment {
-        // $VARIAVEL = variavel do codigo ira receber
-        // variavel = variavel do parametro passado na build
-        BRANCH = "${branch}"
-
-    }
     stages {
         stage('Build Master') {
             when {
-                BRANCH == 'main'
+                branch 'main'
             }
             steps {
                 echo "Building Deploying Master ${branch}"
