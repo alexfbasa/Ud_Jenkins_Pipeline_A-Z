@@ -8,6 +8,11 @@ Crie uma variavel user e packageType
  */
 pipeline {
     agent any
+//    environment{
+//        BRANCH = "${branch}"
+//        DEPLOY_VERSION = "${dep}"
+//
+//    }
     stages {
         stage('Build Master') {
             when {
