@@ -43,7 +43,7 @@ $ git push origin --tags
 
 To https://github.com/alexfbasa/Ud_Jenkins_Pipeline_A-Z.git
  * [new tag]         1.0 -> 1.0   
-
+![git_tag](images/git-tag.png)
 $ git commit 
 $ git push
 ```
