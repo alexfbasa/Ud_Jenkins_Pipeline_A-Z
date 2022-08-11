@@ -8,6 +8,9 @@ pipeline {
                 ok "OK"
                 submitter "dummyuser,admin@localhost.com"
                 submitterParameter "whoIsSubmitter"
+                parameters {
+                    string{name: 'environment'}
+                }
 
             }
 
