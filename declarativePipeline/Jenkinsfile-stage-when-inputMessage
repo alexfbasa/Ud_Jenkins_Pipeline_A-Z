@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             input {
-                message "Please specify environment:"
+                message "Por favor especifique o ambiente:"
                 ok "OK"
                 submitter "dummyuser,admin@localhost.com"
                 submitterParameter "whoIsSubmitter"
                 parameters {
-                    string(name: 'environment', defaultValue: 'Dev', description: 'Environment to build for (Valid values: Dev, Test, Prod)')
+                    string(name: 'ambiente', defaultValue: 'Dev', description: 'Environment to build for (Valid values: Dev, Test, Prod)')
                     string(name: 'version', defaultValue: '1.0', description: 'Version number to build for')
                     booleanParam(name: 'to_deploy_to_environment', defaultValue: true, description: '')
                 }
@@ -17,7 +17,7 @@ pipeline {
             }
 
             steps {
-                echo "We are building for ${environment}"
+                echo "We are building for ${ambiente}"
                 echo "region:, myText: , , and myFile:"
                 echo "submitter is: "
                 echo "selected credentials is: "
