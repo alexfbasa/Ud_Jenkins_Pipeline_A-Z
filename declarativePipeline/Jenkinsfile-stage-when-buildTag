@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Build com Tag') {
             when {
                 // Habilitar Discover Tag
                 tag "2.0"
