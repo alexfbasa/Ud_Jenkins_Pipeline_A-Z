@@ -22,7 +22,7 @@ pipeline {
 
             steps {
                 echo "We are building for ${ambiente}"
-                echo "region:${region}, myText: ${myText}, myPassword: ${myPassword}, and myFile: ${myFile}"
+                echo "region:${region}, myText: ${myText}, myPassword: ${myPassword}}"
                 echo "submitter is: ${whoIsSubmitter}"
                 echo "selected credentials is: ${myCredentials}"
             }
