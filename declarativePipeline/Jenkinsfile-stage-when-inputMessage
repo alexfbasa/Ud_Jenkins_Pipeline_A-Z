@@ -9,7 +9,7 @@ pipeline {
                 submitter "dummyuser,admin@localhost.com"
                 submitterParameter "whoIsSubmitter"
                 parameters {
-                    string(name: 'environment')
+                    string(name: 'environment', defaultValue: 'Dev', description: 'Environment to build for (Valid values: Dev, Test, Prod)')
                 }
 
             }
