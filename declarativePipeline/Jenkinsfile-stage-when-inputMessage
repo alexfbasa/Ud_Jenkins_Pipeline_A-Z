@@ -10,6 +10,8 @@ pipeline {
                 submitterParameter "whoIsSubmitter"
                 parameters {
                     string(name: 'environment', defaultValue: 'Dev', description: 'Environment to build for (Valid values: Dev, Test, Prod)')
+                    string(name: 'version', defaultValue: '1.0', description: 'Version number to build for')
+                    booleanParam(name: 'to_deploy_to_environment', defaultValue: true, description: '')
                 }
 
             }
