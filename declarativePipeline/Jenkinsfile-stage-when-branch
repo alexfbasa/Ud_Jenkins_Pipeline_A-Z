@@ -5,7 +5,6 @@ e depois descartadas
 /* Essas variaveis serao definidas no Jenkins habilitando a opcao
 [] This project is parameterized
 Crie uma variavel user e packageType
-
  */
 pipeline {
     agent any
@@ -15,7 +14,7 @@ pipeline {
                 branch 'main'
             }
             steps {
-                echo "Building Deploying Master ${branch}"
+                echo "Building Deploying Master"
             }
         }
         stage('Build Dev') {
@@ -23,7 +22,7 @@ pipeline {
                 branch 'dev'
             }
             steps {
-                echo "Building Deploying Dev ${branch}"
+                echo "Building Deploying Dev"
             }
         }
     }
