@@ -12,7 +12,7 @@ pipeline {
             }
 
             steps {
-                echo "We are building for , and we are deploying to environment: ${to_deploy_to_environment}"
+                echo "We are building for , and we are deploying to environment: "
                 echo "region:, myText: , , and myFile:"
                 echo "submitter is: "
                 echo "selected credentials is: "
