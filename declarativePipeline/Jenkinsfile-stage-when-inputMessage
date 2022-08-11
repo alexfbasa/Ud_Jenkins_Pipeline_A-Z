@@ -9,13 +9,13 @@ pipeline {
                 submitter "dummyuser,admin@localhost.com"
                 submitterParameter "whoIsSubmitter"
                 parameters {
-                    string{name: 'environment'}
+                    string(name: 'environment')
                 }
 
             }
 
             steps {
-                echo "We are building for , and we are deploying to environment: "
+                echo "We are building for ${environment}"
                 echo "region:, myText: , , and myFile:"
                 echo "submitter is: "
                 echo "selected credentials is: "
