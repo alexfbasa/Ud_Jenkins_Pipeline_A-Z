@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             when {
                 // Habilitar Discover Tag
-                buildingTag(1.0)
+                tag "2.0"
             }
             steps {
                 echo "Building Deploying tag"
