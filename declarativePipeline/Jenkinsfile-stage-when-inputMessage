@@ -30,6 +30,12 @@ pipeline {
                 success {
                     echo 'Build executada com Sucesso'
                 }
+                failure {
+                    echo 'Build falho'
+                }
+                always {
+                    echo 'Sempre vai mostrar'
+                }
             }
         }
     }
