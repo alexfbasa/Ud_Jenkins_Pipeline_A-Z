@@ -14,6 +14,7 @@ pipeline {
                     booleanParam(name: 'to_deploy_to_environment', defaultValue: true, description: '')
                     choice(choices: 'US-EAST-1\nUS-WEST-2', description: 'What AWS region?', name: 'region')
                     text(name:'myText', defaultValue:'myTextValue', description:'myText')
+                    password(name:'myPassword', defaultValue:'myPasswordValue', description:'myDescription')
                 }
 
             }
