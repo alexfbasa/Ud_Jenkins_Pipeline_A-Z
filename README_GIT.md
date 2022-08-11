@@ -1,34 +1,33 @@
-
-
-
 ## Repository of this course
+
 https://github.com/pipelineascodecourse/source_code
 
 # learning git
 
-Building tag condition 
+Building tag condition
 
 ```groovy
 pipeline {
     agent any
-	
+
     stages {
         stage('Build') {
-		
-			when{
-				buildingTag()
-			}
-		
-            steps {                
+
+            when {
+                buildingTag()
+            }
+
+            steps {
                 echo 'Hello World building tag'
             }
         }
     }
 }
 ```
+
 Criar o build job - MultiBranch Pipeline - Repositorio soh tem a branch Master
 
-Apontar o repo --  Jenkinsfile -- [ADD] discover tags  
+Apontar o repo -- Jenkinsfile -- [ADD] discover tags
 
 Criar uma tag
 
@@ -45,7 +44,8 @@ $ git push origin --tags
 To https://github.com/alexfbasa/Ud_Jenkins_Pipeline_A-Z.git
  * [new tag]         1.0 -> 1.0   
 
-
+$ git commit 
+$ git push
 ```
 
 ```text
