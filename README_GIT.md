@@ -28,7 +28,25 @@ pipeline {
 ```
 Criar o build job - MultiBranch Pipeline - Repositorio soh tem a branch Master
 
-Apontar o repo -- e mais o Jenkinsfile -- [ADD] discover tags  
+Apontar o repo --  Jenkinsfile -- [ADD] discover tags  
+
+Criar uma tag
+
+```text
+$ git branch
+* master
+
+/pipeline-stage-when-buildingTag-tag (master)
+$ git tag 1.0
+
+/pipeline-stage-when-buildingTag-tag (master)
+$ git push origin --tags
+
+To https://github.com/alexfbasa/Ud_Jenkins_Pipeline_A-Z.git
+ * [new tag]         1.0 -> 1.0   
+
+
+```
 
 ```text
 $ git branch
