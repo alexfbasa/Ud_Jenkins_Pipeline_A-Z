@@ -31,7 +31,7 @@ pipeline {
                     echo 'Build executada com Sucesso'
                 }
                 failure {
-                    echo 'Build falho'
+                    echo 'Build falhouuu'
                 }
                 always {
                     echo 'Sempre vai mostrar'
