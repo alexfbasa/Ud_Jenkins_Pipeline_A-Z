@@ -1,0 +1,28 @@
+/*
+https://www.jenkins.io/doc/book/pipeline/syntax/
+Options
+ */
+pipeline {
+    agent any
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '1'))
+        disableConcurrentBuilds()
+        skipDefaultCheckout()
+    }
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    def name = 'Alex'
+                    if (name == 'Alex')
+                        println "Hi $name"
+                    else
+                        println 'Hi anonymous'
+                    sleep 2
+                    echo 'Finalizando a Build'
+                }
+            }
+        }
+    }
+}
+// Comentario
