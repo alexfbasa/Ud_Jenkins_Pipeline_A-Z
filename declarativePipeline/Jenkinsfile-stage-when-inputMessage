@@ -25,7 +25,8 @@ pipeline {
                 echo "region:${region}, myText: ${myText}, myPassword: ${myPassword}}"
                 echo "submitter is: ${whoIsSubmitter}"
                 echo "selected credentials is: ${myCredentials}"
-            }
+            } //https://www.jenkins.io/doc/book/pipeline/syntax/
+            // Conditions POST
             post {
                 success {
                     echo 'Build executada com Sucesso'
