@@ -5,6 +5,7 @@ Options
 pipeline {
     agent any
     options {
+        // Isso ira criar uma pasta e jogar os arquivos dentro
         checkoutToSubdirectory('newDir')
     }
     stages {
