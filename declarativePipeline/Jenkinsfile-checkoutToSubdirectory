@@ -1,0 +1,18 @@
+/*
+https://www.jenkins.io/doc/book/pipeline/syntax/
+Options
+ */
+pipeline {
+    agent any
+    options {
+        checkoutToSubdirectory('newDir')
+    }
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
+// Comentario
