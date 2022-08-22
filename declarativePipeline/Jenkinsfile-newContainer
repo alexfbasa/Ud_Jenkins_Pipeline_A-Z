@@ -18,8 +18,10 @@ pipeline {
                 sh '/cat /etc/lsb-release'
             }
         }
-        stage('Deploy'){
-            echo 'Hello-World'
+        stage('Deploy') {
+            steps {
+                sh '/cat /etc/lsb-release'
+            }
         }
     }
 }
