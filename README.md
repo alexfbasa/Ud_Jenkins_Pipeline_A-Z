@@ -88,3 +88,9 @@ Jenkins container precisar acessar o docker socket rodando na maquina virtual
 - Instale o plugin CloudBees Docker Build and publish plugin no Jenkins
 - Modifique o arquivo Dockerfile do Jenkins adicionando, download do docker e outras entrandas
 - build a imagem
+
+## Criando uma conta para salvar imagens do em Docker
+1 - acesse https://quay.io e crie a conta
+2 - https://quay.io/tutorial/
+3 - Criar uma conta e senha no Jenkins Server para acessar esse repositorio
+4 - quay.io voce acessa o comando de pull da imagem

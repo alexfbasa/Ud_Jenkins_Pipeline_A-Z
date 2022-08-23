@@ -1,0 +1,27 @@
+/*
+Esse Jenkinsfile ira fazer o download de uma imagem privada, passando usuario e senha
+Readme - sessao conta privada
+Options
+ */
+pipeline {
+    agent {
+        docker {
+            // Instalar Docker and Docker-Pipeline plugin
+            image 'maven:3.5.3-jdk-10-slim'
+            args '-e someEnv=DEV proxy_https=10.10.10.1'
+            args '-e proxy_https=10.10.10.1'
+            alwaysPull true
+
+        }
+    }
+    stages {
+        stage('Build') {
+            steps {
+                sh 'mvn -v'
+                sh 'echo $someEnv'
+                sh 'echo $proxy_https'
+            }
+        }
+    }
+}
+// Comentario
