@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
+                    def Calculator = new Calculator()
                     println Calculator.add (10,10)
                 }
             }
