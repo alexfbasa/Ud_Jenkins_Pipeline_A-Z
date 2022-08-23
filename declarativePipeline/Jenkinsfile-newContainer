@@ -5,6 +5,7 @@ Options
 pipeline {
 	agent {
 		docker {
+		// Instalar Docker and Docker-Pipeline plugin
 			image 'ubuntu:latest'
 		}
 	}
