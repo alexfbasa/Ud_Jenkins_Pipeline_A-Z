@@ -7,19 +7,15 @@ pipeline {
     agent {
         docker {
             // Instalar Docker and Docker-Pipeline plugin
-            image 'maven:3.5.3-jdk-10-slim'
-            args '-e someEnv=DEV proxy_https=10.10.10.1'
-            args '-e proxy_https=10.10.10.1'
-            alwaysPull true
-
+            image 'docker pull quay.io/alexsimple/myfirstrepo'
+            registryUrl 'https://quay.io/repository/'
+            registryCredentialsId 'quay.io'
         }
     }
     stages {
-        stage('Build') {
+        stage('Test') {
             steps {
-                sh 'mvn -v'
-                sh 'echo $someEnv'
-                sh 'echo $proxy_https'
+                sh 'printenv'
             }
         }
     }
