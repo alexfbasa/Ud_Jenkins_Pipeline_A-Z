@@ -7,13 +7,14 @@ pipeline {
         docker {
             // Instalar Docker and Docker-Pipeline plugin
             image 'maven:3.5.3-jdk-10-slim'
+            args '-e someEnv=DEV'
         }
     }
     stages {
         stage('Build') {
             steps {
                 sh 'mvn -v'
-                sh 'env'
+                sh 'echo $someEnv'
             }
         }
     }
