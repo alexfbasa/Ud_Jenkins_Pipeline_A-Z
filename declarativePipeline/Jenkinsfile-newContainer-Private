@@ -7,7 +7,7 @@ pipeline {
     agent {
         docker {
             // Instalar Docker and Docker-Pipeline plugin
-            image 'docker pull quay.io/alexsimple/myfirstrepo'
+            image 'docker pull quay.io/alexsimple/myfirstrepo:latest'
             registryUrl 'https://quay.io/repository/'
             registryCredentialsId 'quay.io'
         }
