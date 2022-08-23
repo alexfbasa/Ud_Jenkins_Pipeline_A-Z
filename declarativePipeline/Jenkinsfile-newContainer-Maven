@@ -8,6 +8,7 @@ pipeline {
             // Instalar Docker and Docker-Pipeline plugin
             image 'maven:3.5.3-jdk-10-slim'
             args '-e someEnv=DEV proxy_https=10.10.10.1'
+            args '-e proxy_https=10.10.10.1'
 
         }
     }
