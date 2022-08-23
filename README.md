@@ -90,6 +90,8 @@ Jenkins container precisar acessar o docker socket rodando na maquina virtual
 - build a imagem
 
 ## Criando uma conta para salvar imagens do em Docker
+https://docs.quay.io/solution/getting-started.html
+Faca o commit e push da imagem direto se voce ja tiver conta 
 1 - acesse https://quay.io e crie a conta
 2 - https://quay.io/tutorial/
 3 - Criar uma conta e senha no Jenkins Server para acessar esse repositorio

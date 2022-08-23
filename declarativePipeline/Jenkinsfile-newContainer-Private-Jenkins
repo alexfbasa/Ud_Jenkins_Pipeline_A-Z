@@ -1,0 +1,23 @@
+/*
+Esse Jenkinsfile ira fazer o download de uma imagem privada, passando usuario e senha
+Readme - sessao conta privada
+Options
+ */
+pipeline {
+    agent {
+        docker {
+            // Instalar Docker and Docker-Pipeline plugin
+            image 'quay.io/alexsimple/secondrepo:latest'
+            registryUrl 'https://quay.io/repository/'
+            registryCredentialsId 'quay.io'
+        }
+    }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'echo $HOME'
+            }
+        }
+    }
+}
+// Comentario
