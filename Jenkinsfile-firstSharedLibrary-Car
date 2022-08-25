@@ -1,0 +1,18 @@
+@Library("pipeline-shared-lib@master") _
+import com.acceleratedskillup.*;
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    def car01 = new Car()
+                    car01.numberOfDoors = 5
+                    car01.brand = "Cheve"
+                    car01.model = "Fusca"
+                    car01.printOutCar()
+                }
+            }
+        }
+    }
+}
