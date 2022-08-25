@@ -1,11 +1,16 @@
-@Library("pipeline-shared-lib@master") _
+def namePerson = 'John Wich'
+
+def printName(name) {
+    echo name
+}
+
 pipeline {
     agent any
     stages {
         stage('Build') {
             steps {
                 script {
-                    swissknife.printName 'Maneul'
+                    printName(namePerson)
                 }
             }
         }
