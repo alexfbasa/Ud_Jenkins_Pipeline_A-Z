@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    def car01 = new Car()
+                    def car01 = new Car(this)
                     car01.numberOfDoors = 5
                     car01.brand = "Cheve"
                     car01.model = "Fusca"
