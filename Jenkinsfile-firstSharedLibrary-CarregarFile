@@ -1,0 +1,13 @@
+@Library("pipeline-shared-lib@master") _
+
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                def arquivo = libraryResources 'com/acceleratedskillup/test.txt'
+                echo arquivo
+            }
+        }
+    }
+}
