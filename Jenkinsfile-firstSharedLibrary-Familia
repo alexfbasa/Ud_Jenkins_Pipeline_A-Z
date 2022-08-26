@@ -1,0 +1,20 @@
+@Library("pipeline-shared-lib@master") _
+import com.acceleratedskillup.*;
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    def familiaAlex = new Familia(this)
+                    familiaAlex.numeroMembrosFamilia = 7
+                    familiaAlex.nomeMae = "Luzinete"
+                    familiaAlex.nomePai = "Waldevino"
+                    familiaAlex.qtdDogs = 2
+                    familiaAlex.nomeDosDogs = "Michel e Eneas"
+                    familiaAlex.printFamilia()
+                }
+            }
+        }
+    }
+}
