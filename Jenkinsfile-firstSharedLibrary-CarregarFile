@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    def arquivo = libraryResources 'com/acceleratedskillup/test.txt'
+                    def arquivo = libraryResource 'com/acceleratedskillup/test.txt'
                     echo arquivo
                 }
             }
