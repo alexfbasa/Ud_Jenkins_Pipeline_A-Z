@@ -40,8 +40,8 @@ services:
     ports:
       - "5433:5432"
     environment:
-      - POSTGRES_USER=admin
-      - POSTGRES_PASSWORD=senha123
+      - POSTGRES_USER=sonar
+      - POSTGRES_PASSWORD=sonarpasswd
       - POSTGRES_DB=db
   sonarqube:
     container_name: sonar
@@ -66,7 +66,7 @@ services:
       - net
     environment:
       - POSTGRES_USER=sonar
-      - POSTGRES_PASSWORD=sonar
+      - POSTGRES_PASSWORD=sonarpasswd
     volumes:
       - postgresql:/var/lib/postgresql
       - postgresql_data:/var/lib/postgresql/data
