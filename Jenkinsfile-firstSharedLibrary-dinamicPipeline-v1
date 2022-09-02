@@ -7,7 +7,7 @@ pipeline {
                 // Chama a classe na biblioteca, nao esquecer ()
                 // name e dayOfWeek vem da classe importada do Map config = [:]
                 // Nao importa a posicao colocada aqui pq a ordem vem da classe
-                helloWorldv3(dayOfWeek: '02/09/2022', name: 'Alexandre Basilio')
+                helloWorldExternalv1(name: "Alexandre", dayOfWeek: "Friday")
             }
         }
     }
