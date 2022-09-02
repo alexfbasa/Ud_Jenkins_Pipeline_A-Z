@@ -5,7 +5,7 @@ pipeline {
         stage('Example') {
             steps {
                 // Chama a classe na biblioteca, nao esquecer ()
-                helloWorldv2('Alexandre Basilio')
+                helloWorldv2('Alexandre Basilio', '02/09/2022')
             }
         }
     }
