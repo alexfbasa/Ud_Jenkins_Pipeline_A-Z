@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                println 'Hello-World'
+                // Chama a classe na biblioteca, nao esquecer ()
+                helloWorld()
             }
         }
     }
