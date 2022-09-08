@@ -4,4 +4,11 @@ node {
                     choice(choices: ['Alexandre', 'Andrea'], description: 'Nome do familiar', name: 'irmao'),
             ])
     ])
+    donoWorkspaceToJenkinsUser
+
+    def imageName = 'NodeJS'
+
+    stage('Print Input Params'){
+        sh 'printenv'
+    }
 }
