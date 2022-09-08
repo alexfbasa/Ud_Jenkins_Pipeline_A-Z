@@ -1,0 +1,18 @@
+node {
+    properties([
+            parameter([
+                    choice(choices: ['Dev', 'Prod'], description: 'Select your env', name: 'Project'),
+                    String(defaultValue: 'Dave', name: 'FIRST_NAME', trim: true),
+            ])
+    ])
+    ownWorkspaceToJenkinsUser()
+
+    def imageName = 'nodeJS'
+
+    stage('Print Input Parameters') {
+        sh 'printenv'
+    }
+    stage('Checkout SCM'){
+        checkout scm
+    }
+}
