@@ -13,4 +13,7 @@ node {
     stage('Checkout') {
         checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/alexfbasa/docker-demo.git']]])
     }
+    stage('Build Image') {
+        sh "docker build -t ${imageName} -f Dockerfile ."
+    }
 }
