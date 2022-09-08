@@ -9,7 +9,6 @@ node {
 
     stage('Print Input Params') {
         sh 'printenv'
-        sh "echo O nome escolhido foi ${name}"
     }
     stage('Checkout') {
         checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/alexfbasa/docker-demo.git']]])
