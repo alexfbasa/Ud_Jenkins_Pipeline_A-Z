@@ -19,3 +19,8 @@ Add - Sonarqube
 
 Confure o Quality Gattes depois salve, volte e finalize as configuracoes
 do Scanner em Global conf tools
+
+
+Problemas para acessar docker do host via container
+
+no host de permissao chmod /var/run/docker.sock
