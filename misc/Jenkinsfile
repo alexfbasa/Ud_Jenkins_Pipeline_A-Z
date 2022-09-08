@@ -5,7 +5,7 @@ node {
             ])
     ])
 
-    def imageName = 'NodeJS'
+    def imageName = 'nodejs'
 
     stage('Print Input Params') {
         sh 'printenv'
