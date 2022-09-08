@@ -1,7 +1,6 @@
 node {
     properties([
             parameters([
-                    string(name: 'color', defaultValue: 'blue', description: 'The build\'s color'),
                     choice(choices: ['Alexandre', 'Andrea'], description: 'Nome do familiar', name: 'irmao'),
             ])
     ])
