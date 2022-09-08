@@ -4,7 +4,7 @@ node {
     def mvnHome
 
     stage('Checkout') {
-        git 'https://github.com/wardiaene/jave-demo.git'
+        git 'https://github.com/wardviaene/jave-demo.git'
 
         mvnHome = tools 'M3'
     }
